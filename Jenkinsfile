@@ -7,7 +7,7 @@ pipeline {
 
 tools
 {
-	maven 'maven_home'
+	maven 'M3'
 }
 stages
 {
@@ -17,14 +17,14 @@ stages
         echo "checkingout stage"
         echo "${params.browser}"
         deleteDir()
-        git branch: 'main', credentialsId: 'c5aef89d-c4bf-4c43-8aa6-7def9b90e32c', url: 'https://github.com/sunilpatro1985/SeleniumJavaFramework.git'
+        git branch: 'main', credentialsId: 'Divya_git', url: 'https://github.com/Divya-CI/SeleniumJavaFramework.git'
         }
     }
     stage('Test'){
         steps{
         catchError{
             echo "Test stage"
-            sh "mvn test -Dbrowser=${params.browser} -Dplatform=${params.platform} -Dmaven.test.failure.ignore=true"
+            bat "mvn test -Dbrowser=${params.browser} -Dplatform=${params.platform} -Dmaven.test.failure.ignore=true"
             }
             echo currentBuild.result
         }
