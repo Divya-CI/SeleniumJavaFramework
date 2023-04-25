@@ -42,7 +42,7 @@ post{
         archiveArtifacts artifacts: 'reports/spark.html', followSymlinks: false
         archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
         junit allowEmptyResults: true, skipMarkingBuildUnstable: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
-	publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'C:\ProgramData\Jenkins\.jenkins\workspace\HTML_report_test', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+	publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/surefire-reports/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
     }
 }
 }
