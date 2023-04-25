@@ -42,7 +42,7 @@ post{
         archiveArtifacts artifacts: 'reports/spark.html', followSymlinks: false
         archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
         junit allowEmptyResults: true, skipMarkingBuildUnstable: true, skipPublishingChecks: true, testResults: 'target/surefire-reports/*.xml'
-	publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'reports/spark.html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+	publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
     }
 }
 }
