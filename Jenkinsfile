@@ -1,5 +1,5 @@
 pipeline {
-	agent any{ label 'windows'}
+	agent { label 'windows'}
 	parameters {
       string defaultValue: 'chrome', description: 'select a browser', name: 'browser', trim: false
       string defaultValue: 'local', description: 'select a platform', name: 'platform', trim: false
